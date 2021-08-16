@@ -1,0 +1,38 @@
+name: Django Tests
+
+on:
+  push:
+    branches:
+      - main
+  
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9.5
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        python3 -m pip3 install --upgrade pip
+        pip3 install -r requirements.txt
+    - name: Lint with flake8
+      run: |
+        pip3 install flake8
+        flake8
+    - name: Coverage report
+      run: |
+        pip3 install coverage
+        coverage run manage.py test
+        coverage report
+    
+
+
+        

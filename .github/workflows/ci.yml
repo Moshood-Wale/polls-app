@@ -23,15 +23,9 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         pip3 install -r mysite/requirements.txt
-    # - name: Lint with flake8
-    #   run: |
-    #     pip3 install flake8
-    #     flake8
-    # - name: Coverage report
-    #   run: |
-    #     pip3 install coverage
-    #     coverage run manage.py test
-    #     coverage report
+    - name: Test django
+      run: |
+        python3 manage.py test
     
 
 

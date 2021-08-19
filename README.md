@@ -1,5 +1,7 @@
 ## Building Web Applications
-
+## Link to my portfolio app 
+http://127.0.0.1:8000/
+https://github.com/Moshood-Wale/wale.git
 ### For Context
 
 We want to learn how to create robust web applications using Django(a high-level Python Web framework that encourages rapid development and clean, pragmatic design) along with Continuous Integration(the practice of automating the integration of code changes from multiple contributors into a single software project). You are to focus on learning and understanding the following
